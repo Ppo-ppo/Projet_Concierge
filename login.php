@@ -9,7 +9,7 @@
 </head>
 <body>
 <main class="mainContainer">
-    <form action="login.php" class="login" method="post">
+    <form action="connect.php" class="login" method="post">
         <h1>Login</h1>
         <div class="username">
             <label for="username">Username:</label>
@@ -23,6 +23,7 @@
             <button class="btn" type="submit" name="action" value="login">Login</button>
         </section>
     </form>
+    
 </main>  
 </body>
 </html>
