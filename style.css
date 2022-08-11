@@ -1,34 +1,93 @@
-
-.mainContainer{
-    width: 100vw;
-    height: 100vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
 }
-.login{
-    width: 500px;
-    height: 600px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    border-radius: 20px;
-    border: solid 2px black;
-    background-color:#ffe8fc ;
+body{
+    background-image: url('petiponey.jpeg');
+}
+h1,
+h2 {
+    text-align: center;
+    margin: 25px;
 }
 
-.btn{
-    margin-top: 20px;
+form {
+    display: flex;
+    justify-content: center;
+    margin-top: 50px;
+    height: 35px;
+}
+
+form> * {
+    margin: 0 20px;
+    padding: 5px;
+    height: 100%;
+    border-radius: 30px;
+    border: solid 1px black;
     background-color: #E9DDDD;
-    width: 120px;
-    height: 30px;
-    border-radius:15px;
 }
-.username, .password{
-    margin:10px;
-    width: 50%;
-    display:flex;
-    justify-content: space-between;
+
+.send {
+    padding: 0 15px;
+}
+
+.task {
+    width: 300px;
+}
+
+.etages {
+    width: 80px;
+    text-align: center;
+}
+
+.logout {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    color: black;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.contenantagenda {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.agenda {
+    width: 90vw;
+    height: 600px;
+    background-color: #ffe8fc;
+    display: flex;
+    border-radius: 20px;
+}
+
+.etage,
+.tache,
+.date,
+.suppr {
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    padding-top: 10px;
+}
+
+.etage,
+.tache,
+.date {
+    border-right: 1px solid black;
+}
+
+.etage,
+.suppr {
+    width: 10%;
+}
+
+.tache,
+.date {
+    width: 40%;
 }

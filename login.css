@@ -1,0 +1,41 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+body{
+    background-image: url('petiponey.jpeg');
+}
+.mainContainer{
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.login{
+    width: 500px;
+    height: 600px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    border-radius: 20px;
+    border: solid 2px black;
+    background-color: #ffdefa;
+}
+.btn{
+    margin-top: 20px;
+    background-color: #E9DDDD;
+    width: 120px;
+    height: 30px;
+    border-radius:12px;
+}
+.username,.password {
+    margin:10px;
+    width: 63%;
+    display: flex;
+    justify-content: space-between;
+}
