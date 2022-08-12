@@ -7,19 +7,16 @@
 body{
     background-image: url('petiponey.jpeg');
 }
-h1,
-h2 {
+h1,h2 {
     text-align: center;
     margin: 25px;
 }
-
 form {
     display: flex;
     justify-content: center;
     margin-top: 50px;
     height: 35px;
 }
-
 form> * {
     margin: 0 20px;
     padding: 5px;
@@ -28,20 +25,16 @@ form> * {
     border: solid 1px black;
     background-color: #E9DDDD;
 }
-
 .send {
     padding: 0 15px;
 }
-
 .task {
     width: 300px;
 }
-
 .etages {
     width: 80px;
     text-align: center;
 }
-
 .logout {
     position: absolute;
     top: 10px;
@@ -50,14 +43,12 @@ form> * {
     text-decoration: none;
     font-weight: bold;
 }
-
 .contenantagenda {
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
 }
-
 .agenda {
     width: 90vw;
     height: 600px;
@@ -65,29 +56,26 @@ form> * {
     display: flex;
     border-radius: 20px;
 }
-
-.etage,
-.tache,
-.date,
-.suppr {
+.etage,.tache,.date,.suppr {
     height: 100%;
     display: flex;
-    justify-content: center;
+    align-items: center;
     padding-top: 10px;
+    flex-direction: column;
 }
-
-.etage,
-.tache,
-.date {
+.etage,.tache,.date {
     border-right: 1px solid black;
 }
-
-.etage,
-.suppr {
+.etage,.suppr {
     width: 10%;
 }
-
-.tache,
-.date {
+.tache,.date {
     width: 40%;
+}
+.suppr>form{
+    flex-direction: column;
+    transform: translateY(50px);
+}
+.suppr>form>input{
+    margin-top: 8px;
 }

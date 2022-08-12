@@ -10,7 +10,6 @@ function connect(){
         die();
     }
 }
-
 function login(){
     $findUser = connect()->prepare('SELECT * FROM `login` WHERE `name` = :login_user');
     $findUser->bindParam(':login_user', $_POST['username'], PDO::PARAM_STR);
@@ -20,14 +19,22 @@ function login(){
     if ($user && password_verify($_POST['password'], $user['password'])) {
         $_SESSION['nom_user'] = $user['name'];
         header('Location: ./index.php');  
-        
     } else {
         echo 'Invalid username or password';
     }
 }
-
 if(isset($_POST['action']) && !empty($_POST['username'])  && !empty($_POST['password'])  && $_POST['action']=="login"){
     login();
+}
+if(isset($_GET['send'])) {
+    $findData = connect()->prepare('SELECT * FROM agenda ORDER BY date');
+    $findData->execute();
+    $datas = $findData->fetchAll();
+}
+else {
+    $findData = connect()->prepare('SELECT * FROM agenda ORDER BY date');
+    $findData->execute();
+    $datas = $findData->fetchAll();
 }
 
 ?>
