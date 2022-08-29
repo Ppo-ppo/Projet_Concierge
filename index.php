@@ -15,9 +15,9 @@
 <body>
     <h1>Conciergerie</h1>
     <a href="./logout.php" class="logout">Se déconnecter</a>
-    <section class="addtask">
+    <section>
         <h2>Ajouter une tache</h2>
-        <form action="" method="get">
+        <form action="" method="get" class="addtask">
             <input type="text" name="task" class="task" placeholder="Ecrivez une tache"require>
             <input type="date" name="date"require>
             <input type="number" name="etage" class="etages" placeholder="Etage" min="-2" max="7" required>
@@ -68,13 +68,15 @@
                     ?>
             </div>
             <div class="suppr">
+            <form method='get'action='' class='deletebtn'>
                 <h2>SUPPR</h2>
                 <?php
                 for ($i=0; $i <count($datas) ; $i++) { 
                   $index = strval($i);
-                  echo "<form method='get'action=''><input type='submit' name='".$index."' value='suppr'>";
+                  echo "<input type='submit' name='".$index."' value='suppr'><br>";
                 }
                 ?>
+            </form>
             </div>
         </div>
     </section>
