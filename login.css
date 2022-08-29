@@ -4,9 +4,7 @@
     box-sizing: border-box;
     font-family: sans-serif;
 }
-body{
-    background-image: url('petiponey.jpeg');
-}
+
 .mainContainer{
     width: 100vw;
     height: 100vh;
@@ -22,9 +20,9 @@ body{
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    border-radius: 20px;
     border: solid 2px black;
-    background-color: #ffdefa;
+    background-color: #d3D3D3;
+    border-radius: 5px;
 }
 .btn{
     margin-top: 20px;

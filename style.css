@@ -4,9 +4,6 @@
     box-sizing: border-box;
     font-family: sans-serif;
 }
-body{
-    background-image: url('petiponey.jpeg');
-}
 h1,h2 {
     text-align: center;
     margin: 25px;
@@ -21,7 +18,7 @@ form> * {
     margin: 0 20px;
     padding: 5px;
     height: 100%;
-    border-radius: 30px;
+    border-radius: 5px;
     border: solid 1px black;
     background-color: #E9DDDD;
 }
@@ -52,7 +49,7 @@ form> * {
 .agenda {
     width: 90vw;
     height: 600px;
-    background-color: #ffe8fc;
+    background-color: #d3D3D3;
     display: flex;
     border-radius: 20px;
 }
