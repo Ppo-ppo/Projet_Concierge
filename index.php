@@ -5,6 +5,9 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Aboreto&display=swap" rel="stylesheet">
     <title>Conciergerie</title>
     <link rel="stylesheet" href="style.css">
 </head>
@@ -38,7 +41,7 @@
         <h2>AGENDA</h2>
         <div class="agenda">
             <div class="etage">
-                <p>ETAGE <br/></p>
+                <h2>ETAGE <br/></h2>
                 <?php
                     for ($i=0; $i < count($datas); $i++) {
                         $index = strval($i);
@@ -47,7 +50,7 @@
                 ?>
             </div>
             <div class="tache">
-                <p>TACHE</p>
+                <h2>TACHE</h2>
                 <?php
                     for ($i=0; $i < count($datas); $i++) { 
                         $index = strval($i);
@@ -56,7 +59,7 @@
                 ?>
             </div>
             <div class="date">
-                <p>DATE</p>
+                <h2>DATE</h2>
                 <?php
                     for ($i=0; $i < count($datas); $i++) { 
                         $index = strval($i);
@@ -65,7 +68,7 @@
                     ?>
             </div>
             <div class="suppr">
-                <p>SUPPR</p>
+                <h2>SUPPR</h2>
                 <?php
                 for ($i=0; $i <count($datas) ; $i++) { 
                   $index = strval($i);

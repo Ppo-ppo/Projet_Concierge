@@ -4,7 +4,15 @@
     box-sizing: border-box;
     font-family: sans-serif;
 }
-
+body{
+    background-image: url('geom.jpeg');
+    background-size: cover;
+}
+h1,h2 {
+    text-align: center;
+    margin: 25px;
+    font-family: 'Aboreto';
+}
 .mainContainer{
     width: 100vw;
     height: 100vh;
@@ -12,6 +20,7 @@
     justify-content: center;
     align-items: center;
     flex-direction: column;
+    
 }
 .login{
     width: 500px;
@@ -21,15 +30,21 @@
     align-items: center;
     flex-direction: column;
     border: solid 2px black;
-    background-color: #d3D3D3;
+    background-color: #efe9e0d6;
     border-radius: 5px;
+    backdrop-filter: blur(8px);
 }
 .btn{
     margin-top: 20px;
-    background-color: #E9DDDD;
+    background-color: #efe9e0;
     width: 120px;
     height: 30px;
     border-radius:12px;
+    transition: 0.6s;
+}
+.btn:hover{
+    background-color: #f8a390;
+    transition: 0.6s;
 }
 .username,.password {
     margin:10px;

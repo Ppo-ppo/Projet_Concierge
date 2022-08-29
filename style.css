@@ -4,10 +4,25 @@
     box-sizing: border-box;
     font-family: sans-serif;
 }
+body{
+    background-image: url('geom.jpeg');
+    background-size: cover;
+}
 h1,h2 {
     text-align: center;
     margin: 25px;
+    font-family: 'Aboreto';
 }
+a{
+    transition: 0.6s;
+    font-family: 'Aboreto';
+    font-size:18px ;
+}
+a:hover{
+    color:#F15F44;
+    transition: 0.6s;
+}
+
 form {
     display: flex;
     justify-content: center;
@@ -20,7 +35,7 @@ form> * {
     height: 100%;
     border-radius: 5px;
     border: solid 1px black;
-    background-color: #E9DDDD;
+    background-color: #efe9e0;
 }
 .send {
     padding: 0 15px;
@@ -48,10 +63,12 @@ form> * {
 }
 .agenda {
     width: 90vw;
-    height: 600px;
-    background-color: #d3D3D3;
+    min-height: 400px;
+    background-color: #efe9e0d4;
     display: flex;
     border-radius: 20px;
+    border: 1px solid black;
+    backdrop-filter: blur(8px);
 }
 .etage,.tache,.date,.suppr {
     height: 100%;
@@ -71,8 +88,13 @@ form> * {
 }
 .suppr>form{
     flex-direction: column;
-    transform: translateY(50px);
+    transform: translateY(100px);
+    transition: 0.6s;
+}
+.suppr>form>input:hover{
+    background-color: #f8a390;
+    transition: 0.6s;
 }
 .suppr>form>input{
-    margin-top: 8px;
+    margin-top: 10px;
 }
