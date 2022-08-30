@@ -8,6 +8,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Aboreto&display=swap" rel="stylesheet">
+<script src="https://kit.fontawesome.com/09da7dbb94.js" crossorigin="anonymous"></script>
     <title>Conciergerie</title>
     <link rel="stylesheet" href="style.css">
 </head>
@@ -73,7 +74,7 @@
                 <?php
                 for ($i=0; $i <count($datas) ; $i++) { 
                   $index = strval($i);
-                  echo "<input type='submit' name='".$index."' value='suppr'><br>";
+                  echo '<a class="crossdelete" href="?supp='.$datas[$index]['id'].'"><i class="fa-solid fa-xmark"></i></a><br>';
                 }
                 ?>
             </form>
@@ -86,6 +87,16 @@
         header('Location: ./login.php');
     }
 ?>
+<section class="modal">
+    <i class="fa-solid fa-xmark croixModal"></i>
+    <form action="" method="get" class="modifytask">
+            <h2>Modifier</h2>
+            <input type="text" name="task" class="task" required>
+            <input type="date" name="date"required>
+            <input type="number" name="etage" class="etages" placeholder="Etage" min="-2" max="7" required>
+            <input type="submit" name="send" class="send">
+    </form>
+</section>
 </body>
 
 </html>

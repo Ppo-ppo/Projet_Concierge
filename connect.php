@@ -2,7 +2,7 @@
 session_start();
 function connect(){
     try {
-        $db = new PDO('mysql:host=localhost;dbname=conciergerie','root');
+        $db = new PDO('mysql:host=localhost;dbname=conciergerie','root', 'root');
         return $db;
         }
     catch (PDOException $e) {
@@ -36,5 +36,13 @@ else {
     $findData->execute();
     $datas = $findData->fetchAll();
 }
-
+if (isset($_GET['supp'])) {
+    $idtask = $_GET['supp'];
+    delete();
+}
+function delete() {
+    $deleteTask = connect()->prepare("DELETE FROM agenda WHERE id='".$_GET['supp']."'");
+    $deleteTask->execute();
+    header('Location: ./index.php');
+}
 ?>

@@ -103,3 +103,44 @@ a:hover{
     flex-direction: column;
     justify-content: space-between;
 }
+.crossdelete{
+ height: 18px;
+}
+.modal{
+    min-width: 100vw;
+    height: 100vh;
+    background-color: #efe9e0df;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    backdrop-filter: blur(8px);
+    position: absolute;
+    top:0;
+    left: 0;
+
+}
+.croixModal{
+    position: absolute;
+    top:30px;
+    right: 30px;
+    color: black;
+    transition: 0.6s;
+    font-size: 40px;
+}
+.croixModal:hover{
+    color: #F15F44;
+    transition: 0.6s;
+}
+.modal>.modifytask{
+ width: 600px;
+ height: 400px;
+ background-color: #f8a390;
+ display: flex;
+ flex-direction: column;
+ justify-content: center;
+ align-items: center;
+ border-radius: 10px;
+}
+.modal>.modifytask>input{
+    margin-bottom: 20px;
+}
