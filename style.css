@@ -117,6 +117,7 @@ a:hover{
     position: absolute;
     top:0;
     left: 0;
+    z-index: 100000;
 
 }
 .croixModal{
@@ -143,4 +144,18 @@ a:hover{
 }
 .modal>.modifytask>input{
     margin-bottom: 20px;
+}
+.deletebtn{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.crossdelete{
+    height: 18px;
+}
+.btns{
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    height: 18px;
 }

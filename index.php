@@ -70,13 +70,14 @@
             </div>
             <div class="suppr">
             <form method='get'action='' class='deletebtn'>
-                <h2>SUPPR</h2>
+                <h2>MODIFS</h2>
                 <?php
                 for ($i=0; $i <count($datas) ; $i++) { 
                   $index = strval($i);
-                  echo '<a class="crossdelete" href="?supp='.$datas[$index]['id'].'"><i class="fa-solid fa-xmark"></i></a><br>';
+                  echo '<div class="btns"><a class="btnmodify" href="?modify='.$datas[$index]['id'].'"><i class="fa-solid fa-pen"></i></a><a class="crossdelete" href="?supp='.$datas[$index]['id'].'"><i class="fa-solid fa-xmark"></i></a></div><br>';
                 }
                 ?>
+
             </form>
             </div>
         </div>
@@ -87,7 +88,7 @@
         header('Location: ./login.php');
     }
 ?>
-<section class="modal">
+<!-- <section class="modal">
     <i class="fa-solid fa-xmark croixModal"></i>
     <form action="" method="get" class="modifytask">
             <h2>Modifier</h2>
@@ -96,7 +97,7 @@
             <input type="number" name="etage" class="etages" placeholder="Etage" min="-2" max="7" required>
             <input type="submit" name="send" class="send">
     </form>
-</section>
+</section> -->
 </body>
 
 </html>

@@ -45,4 +45,11 @@ function delete() {
     $deleteTask->execute();
     header('Location: ./index.php');
 }
+
+if(isset($_GET['modify'])) {
+    spawnModal();
+}
+function spawnModal() {
+    echo '<section class="modal"><a href="index.php"><i class="fa-solid fa-xmark croixModal"></i></a><form action="" method="get" class="modifytask"><h2>Modification</h2><input type="text" name="task" class="task" required><input type="date" name="date"required><input type="number" name="etage" class="etages" min="-2" max="7" required><input type="submit" name="send" class="send" value="Modifier"></form></section>';
+}
 ?>
