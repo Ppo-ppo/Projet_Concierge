@@ -159,3 +159,19 @@ a:hover{
     justify-content: space-around;
     height: 18px;
 }
+.btns>a{
+    color: black;
+    transition:color 0.6s;
+}
+.btns>a:hover{
+    color:#F15F44;
+    transition:color 0.6s;
+
+}
+.subsub{
+    transition: 0.6s;
+}
+.subsub:hover{
+    color: #F15F44;
+    transition: color 0.6s;
+}

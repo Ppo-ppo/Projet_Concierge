@@ -22,7 +22,7 @@
             <input type="text" name="task" class="task" placeholder="Ecrivez une tache"require>
             <input type="date" name="date"require>
             <input type="number" name="etage" class="etages" placeholder="Etage" min="-2" max="7" required>
-            <input type="submit" name="send" class="send">
+            <input type="submit" name="send" class="send subsub">
         </form>
     </section>
     <?php
@@ -70,7 +70,7 @@
             </div>
             <div class="suppr">
             <form method='get'action='' class='deletebtn'>
-                <h2>MODIFS</h2>
+                <h2>ACTIONS</h2>
                 <?php
                 for ($i=0; $i <count($datas) ; $i++) { 
                   $index = strval($i);
