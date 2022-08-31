@@ -53,17 +53,18 @@ function spawnModal() {
     $dataToModify = connect()->prepare("SELECT * FROM agenda WHERE id='".$_GET['modify']."'");
     $dataToModify->execute();
     $modifyData = $dataToModify->fetch();
-    echo '<section class="modal"><a href="index.php"><i class="fa-solid fa-xmark croixModal"></i></a><form action="" method="get" class="modifytask"><h2>Modification</h2><input value="'.$modifyData['task_name'].'" type="text" name="task" class="task" required><input type="date" value="'.$modifyData['date'].'" name="date"required><input value="'.$modifyData['etage'].'" type="number" name="etage" class="etages" min="-2" max="7" required><input type="submit" name="modify" class="send" value="Modifier"></form></section>';
+    echo '<section class="modal"><a href="index.php"><i class="fa-solid fa-xmark croixModal"></i></a><form action="" method="get" class="modifytask"><h2>Modification</h2><input value="'.$_GET['modify'].'" type="hidden" name="id" class="id" readOnly="readOnly" required><input value="'.$modifyData['task_name'].'" type="text" name="task" class="task" required><input type="date" value="'.$modifyData['date'].'" name="date"required><input value="'.$modifyData['etage'].'" type="number" name="etage" class="etages" min="-2" max="7" required><input type="submit" name="confirmModify" class="send" value="Modifier"></form></section>';
 };
 
-if(isset($_GET['modify'])) {
+if(isset($_GET['confirmModify'])) {
     if(isset($_GET['task'])&!empty($_GET['task'])&isset($_GET['date'])&!empty($_GET['date'])&isset($_GET['etage'])&!empty($_GET['etage'])){
-        $findUser = connect()->prepare("UPDATE `agenda` SET task_name = :task_name, date = :date, etage = :etage WHERE id='".$_GET['modify']."'");
+        $findUser = connect()->prepare("UPDATE agenda SET task_name = :task_name, date = :date, etage = :etage WHERE id = :id");
         $findUser->bindParam(':task_name', $_GET['task'], PDO::PARAM_STR);
         $findUser->bindParam(':date', $_GET['date'], PDO::PARAM_STR);
         $findUser->bindParam(':etage', $_GET['etage'], PDO::PARAM_INT);
+        $findUser->bindParam(':id', $_GET['id'], PDO::PARAM_INT);
         $findUser->execute();
         $user = $findUser->fetch();
         header('Location: ./index.php');
-}};
+}}
 ?>
